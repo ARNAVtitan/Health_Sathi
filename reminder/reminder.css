@@ -85,15 +85,13 @@
   .hidden {
     display: none;
   }
-  
   .day-checkboxes {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
   }
-  
-  .day-checkboxes label {
+  day-checkboxes label {
     background: #e0f7fa;
     padding: 8px 12px;
     border-radius: 8px;
@@ -109,8 +107,7 @@
   
   .day-checkboxes label:hover {
     background: #b2ebf2;
-  }
-  
+  }  
   .time-select {
     display: flex;
     gap: 10px;
@@ -124,11 +121,27 @@
     border-radius: 8px;
     font-size: 14px;
     appearance: none;
-    font-family: 'Mulish', sans-serif;
   }
   
   .time-select span {
     font-weight: bold;
     font-size: 18px;
   }
+  .back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 28px;
+    color: #00b4d8;
+    background: white;
+    border-radius: 20%;
+    padding: 10px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, background-color 0.3s;
+  }
   
+  .back-arrow:hover {
+    transform: scale(1.1);
+    background-color: #caf0f8;
+  }
