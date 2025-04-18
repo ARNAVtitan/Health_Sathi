@@ -201,3 +201,23 @@ body{
     right: 0;
     transform: translateX(0);
 }
+.back-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: linear-gradient(to right, #00c6ff, #0072ff);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s;
+    z-index: 100;
+}
+
+.back-home:hover {
+    background-color: rgb(140, 214, 243);
+}
