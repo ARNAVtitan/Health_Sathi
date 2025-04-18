@@ -100,6 +100,23 @@
   .nav-links i {
     font-size: 1.1rem;
   }
+  .btn-login {
+    padding: 0.4rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-family: 'Mulish', sans-serif;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-login:hover {
+    background-color: #357ab8; /* slightly darker blue */
+    transform: scale(1.05);
+  }
+  
   
   .user-actions {
     display: flex;
