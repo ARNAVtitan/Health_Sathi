@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Reminder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./reminder.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Health Reminder Setup</h1>
+    <p>Set daily/weekly reminders for exercise, check-ups, or any health routine</p>
+
+    <form id="reminderForm">
+      <label for="reminderType">Reminder Type:</label>
+      <select id="reminderType" name="reminderType" required>
+        <option value="">--Select--</option>
+        <option value="checkup">Regular Health Check-Up</option>
+        <option value="exercise">Daily Exercise</option>
+        <option value="medication">Medication Reminder</option>
+        <option value="custom">Custom Activity</option>
+      </select>
+
+      <label>Select Days:</label>
+      <div class="day-checkboxes">
+        <label><input type="checkbox" name="days" value="Monday"> Mon</label>
+        <label><input type="checkbox" name="days" value="Tuesday"> Tue</label>
+        <label><input type="checkbox" name="days" value="Wednesday"> Wed</label>
+        <label><input type="checkbox" name="days" value="Thursday"> Thu</label>
+        <label><input type="checkbox" name="days" value="Friday"> Fri</label>
+        <label><input type="checkbox" name="days" value="Saturday"> Sat</label>
+        <label><input type="checkbox" name="days" value="Sunday"> Sun</label>
+      </div>
+
+      <label for="time">Reminder Time:</label>
+<div class="time-select">
+  <select id="hour" name="hour" required>
+    <option value="">HH</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+  </select>
+
+  <span>:</span>
+
+  <select id="minute" name="minute" required>
+    <option value="">MM</option>
+    <option value="00">00</option>
+    <option value="15">15</option>
+    <option value="30">30</option>
+    <option value="45">45</option>
+  </select>
+
+  <select id="ampm" name="ampm" required>
+    <option value="AM">AM</option>
+    <option value="PM">PM</option>
+  </select>
+</div>
+
+      <label for="notes">Notes (optional):</label>
+      <textarea id="notes" name="notes" placeholder="E.g., 30-min yoga, take vitamin D, etc."></textarea>
+
+      <button type="submit">Set Reminder</button>
+    </form>
+
+    <div id="confirmation" class="hidden">
+      <p>✅ Your reminder has been set for selected days!</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('reminderForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('confirmation').classList.remove('hidden');
+    });
+  </script>
+
+</body>
+</html>
