@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Appointments - Health Sathi</title>
+  <link rel="stylesheet" href="appointments.css" />
+  <link rel="stylesheet" href="../main_page.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar reused -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="../health_Sathi_Logo.jpg" alt="HealthSathi Logo" class="logo" />
+      <a href="../index.html" class="brand-name"><i class="fas fa-home"></i> Health Sathi</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../main_page.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="../records/records_page.html"><i class="fas fa-file-medical"></i> Records</a></li>
+      <li><a href="#" class="active"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+      <li><a href="#"><i class="fas fa-pills"></i> Medications</a></li>
+      <li><a href="#"><i class="fas fa-user-md"></i> Doctors</a></li>
+    </ul>
+    <div class="user-actions">
+      <select id="language-select" class="language-select">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+      <button class="btn-notification"><i class="fas fa-bell"></i></button>
+      <div class="user-profile">
+        <img src="../user-avatar.jpg" alt="User" class="avatar" />
+        <span>John Doe</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Appointment Content -->
+  <main class="appointment-container">
+    <h1>Your Appointments</h1>
+
+    <section id="appointments-list" class="appointments-list">
+      <!-- Appointments will be added here dynamically -->
+    </section>
+
+    <section class="appointment-form">
+      <h2>Add New Appointment</h2>
+      <form id="add-appointment-form">
+        <input type="text" id="appointment-title" placeholder="Appointment Title" required />
+        <input type="date" id="appointment-date" required />
+        <input type="time" id="appointment-time" required />
+        <button type="submit">Add Appointment</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="appointments.js"></script>
+</body>
+</html>

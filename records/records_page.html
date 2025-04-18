@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Sathi - Medical Records</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./records_page.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="./health_Sathi_Logo.jpg" alt="HealthSathi Logo" class="logo">
+            <a href="home" class="brand-name"><i class="fas fa-home"></i>Health Sathi</a>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="../main_page.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="../records/records_page.html" class="active"><i class="fas fa-file-medical"></i> Records</a></li>
+            <li><a href="../appontment/appointments.html"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+            <li><a href="medications.html"><i class="fas fa-pills"></i> Medications</a></li>
+            <li><a href="doctors.html"><i class="fas fa-user-md"></i> Doctors</a></li>
+        </ul>
+        
+        <div class="user-actions">
+            <select id="language-select" class="language-select">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+            </select>
+            <button class="btn-notification"><i class="fas fa-bell"></i></button>
+            <div class="user-profile">
+                <img src="https://i.pravatar.cc/150?img=3" alt="User" class="avatar">
+                <span>John Doe</span>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Medical Records</h1>
+            <button id="upload-modal-btn" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Upload Record
+            </button>
+        </div>
+        
+        <section class="upload-section">
+            <div class="upload-header">
+                <h2 class="section-title">Upload New Record</h2>
+            </div>
+            <form id="upload-form" class="upload-form">
+                <div class="form-group">
+                    <label for="record-type" class="form-label">Record Type</label>
+                    <select id="record-type" class="form-control" required>
+                        <option value="">Select record type</option>
+                        <option value="prescription">Prescription</option>
+                        <option value="lab-report">Lab Report</option>
+                        <option value="scan">Scan/Imaging</option>
+                        <option value="doctor-note">Doctor's Note</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="record-date" class="form-label">Date</label>
+                    <input type="date" id="record-date" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="record-description" class="form-label">Description</label>
+                    <textarea id="record-description" class="form-control" rows="3" placeholder="Enter description..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Upload File</label>
+                    <div id="file-upload" class="file-upload">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p class="file-upload-text">Drag & drop your file here or <span>browse</span></p>
+                        <input type="file" id="record-file" style="display: none;" required>
+                        <div id="file-name" class="file-name"></div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-upload"></i> Upload Record
+                </button>
+            </form>
+        </section>
+        
+        <section class="records-section">
+            <div class="records-header">
+                <h2 class="section-title">Your Medical Records</h2>
+                <div class="records-filter">
+                    <div class="filter-group">
+                        <label for="filter-type" class="form-label">Filter by Type</label>
+                        <select id="filter-type" class="form-control">
+                            <option value="all">All Types</option>
+                            <option value="prescription">Prescriptions</option>
+                            <option value="lab-report">Lab Reports</option>
+                            <option value="scan">Scans/Imaging</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-date" class="form-label">Filter by Date</label>
+                        <select id="filter-date" class="form-control">
+                            <option value="all">All Dates</option>
+                            <option value="today">Today</option>
+                            <option value="week">This Week</option>
+                            <option value="month">This Month</option>
+                            <option value="year">This Year</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="records-grid" class="records-grid">
+                <!-- Records will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+    
+    <!-- Modal for upload confirmation -->
+    <div id="upload-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Upload Successful</h2>
+            <p>Your medical record has been successfully uploaded.</p>
+            <button id="modal-close-btn" class="btn btn-primary">OK</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="./records_page.js"></script>
+</body>
+</html>

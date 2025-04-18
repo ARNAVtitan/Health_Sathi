@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./main_page.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <img src="./health_Sathi_Logo.jpg" alt="HealthSathi Logo" class="logo">
+        
+        
+        <a href="home" class="brand-name"><i class="fas fa-home"></i>Health Sathi</a>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="./records/records_page.html"><i class="fas fa-file-medical"></i> Records</a></li>
+        <li><a href="./appontment/appointments.html"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+        <li><a href="#medications"><i class="fas fa-pills"></i> Medications</a></li>
+        <li><a href="#doctors"><i class="fas fa-user-md"></i> Doctors</a></li>
+      </ul>
+      
+      <div class="user-actions">
+        <select id="language-select" class="language-select">
+          <option value="en">English</option>
+          <option value="hi">हिन्दी</option>
+        </select>
+        <button class="btn-notification"><i class="fas fa-bell"></i></button>
+        <div class="user-profile">
+          <img src="user-avatar.jpg" alt="User" class="avatar">
+          <span>John Doe</span>
+        </div>
+      </div>
+    </nav>
+    <script src="./main_page.js"></script>
+  </body>
+  </html>
