@@ -64,4 +64,7 @@
   .appointment-form button:hover {
     background-color: #3a78c4;
   }
+  .btn-login i {
+    margin-right: 0.4rem;
+  }
   
