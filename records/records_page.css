@@ -492,3 +492,27 @@ body {
         justify-content: center;
     }
 }
+/* Login Button Styles */
+.btn-login {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-family: 'Mulish', sans-serif;
+}
+
+.btn-login:hover {
+    background-color: #357ab8;
+    transform: scale(1.05);
+}
+
+.btn-login i {
+    font-size: 0.9rem;
+}
